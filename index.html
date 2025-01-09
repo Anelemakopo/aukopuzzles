@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aukopuzzles</title>
+     <!-- favicon-->
+     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/logo1.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/logo1.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/logo1.png">
+     <!-- font awesome cdn link  -->
+       <!-- font awesome cdn link  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- lightgallery css cdn link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+     <!-- custom css file link  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- lightgallery css cdn link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <style>
+    /* General Header Styling */
+    .header {
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: yellow; /* Dark background */
+    position: fixed; /* Fixed position at the top of the page */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Full width of the screen */
+    z-index: 1000; /* Ensure it's on top of other content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+    }
+  
+    .header .logo {
+      max-width: 120px;
+      height: auto;
+      height: 70px; /* Adjust logo size */
+    }
+  
+    .navbar {
+      display: flex;
+      gap: 20px;
+    }
+  
+    .navbar a {
+      color: black;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+    font-weight: bold;
+    }
+  
+    .navbar a:hover {
+      color: red;
+    }
+  
+    .menu-toggle {
+      display: none; /* Hidden by default for larger screens */
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 10px; /* Space between toggle and logo */
+    }
+  
+    .iconCart {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-right: 100px; /* Adjust spacing as needed */
+    }
+  
+    .iconCart img {
+    width: 30px;
+    height: 30px;
+  
+    }
+  
+    .totalQuantity {
+      position: absolute;
+      top: -5px;
+      right: -10px;
+      background-color: #ff0000;
+      color: #fff;
+      border-radius: 50%;
+      padding: 2px 6px;
+      font-size: 12px;
+    }
+  
+    /* Responsive Design for Smaller Screens */
+    @media (max-width: 768px) {
+      .navbar {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 20px;
+        background-color: wheat;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        border-radius: 8px;
+      }
+  
+      .navbar.active {
+        display: flex;
+      }
+  
+      .menu-toggle {
+        display: block; /* Show toggle button on smaller screens */
+      }
+      .header {
+      justify-content: flex-start; /* Align items to the left */
+      gap: 20px;
+      }
+    }
+  </style>
+
+<header class="header">
+  <!-- Menu Toggle Button -->
+  <button class="menu-toggle" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Logo -->
+  <img src="images/logo (1).png" alt="AUKODesign" class="logo">
+
+  <!-- Navigation Links -->
+  <nav class="navbar">
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT US</a>
+    <a href="#shop">SHOP OUR PRODUCT</a>
+    <a href="#contact">CONTACT US</a>
+  </nav>
+
+  <!-- Cart Icon -->
+  <div class="iconCart">
+    <img src="icon.png" alt="Cart Icon">
+    <div class="totalQuantity">0</div>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navbar = document.querySelector('.navbar');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+</script>
+  
+    <!-- home section starts -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>Welcome <br></h3>
+              <h2> <span>To</span> </h2>
+             
+             <h3><span>Aukopuzzles</span></h3>
+          
+        </div>
+
+        <div class="image">
+            <img src="images/kid-removebg-preview.png" alt="">
+        </div>
+
+        <div class="custom-shape-divider-bottom-1684324473">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+    </section>
+        <!-- home section ends -->
+
+   
+<!-- Cart Sidebar -->
+<!-- Cart Sidebar -->
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-content">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <button id="checkout">Checkout</button>
+      <button id="closeCart">Close</button>
+  </div>
+</div>
+
+<!-- Shop Section -->
+<section class="shop" id="shop">
+  <h1 class="heading">Shop our <span>Products</span></h1>
+  <div class="product-grid" id="product-grid"></div>
+</section>
+
+<style>
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.heading span {
+  color: #007BFF;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  background: rgb(255, 255, 158);
+  transition: transform 0.3s;
+}
+
+.item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.add-to-cart {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+  background: #0056b3;
+}
+
+/* Cart Sidebar */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Hidden by default */
+  width: 300px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.cart-sidebar.open {
+  right: 0;
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.cart-content h2 {
+  margin-bottom: 16px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.cart-item img {
+  max-width: 50px;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+}
+.cart-sidebar h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.cart-sidebar button {
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#checkout {
+  background-color: #007bff;
+  color: white;
+}
+
+#closeCart {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .cart-sidebar {
+    width: 40%; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-sidebar {
+    width: 100%; /* Full width on mobile */
+  }
+}
+
+</style>
+
+<script>
+  // Toggle Cart Sidebar
+function toggleCartSidebar() {
+    cartSidebar.classList.toggle('open');
+}
+
+// Update the event listeners
+closeCartButton.addEventListener('click', toggleCartSidebar);
+iconCart.addEventListener('click', toggleCartSidebar);
+
+// Open the cart sidebar
+function openCartSidebar() {
+  cartSidebar.style.right = "0"; // Slide in the sidebar
+}
+
+// Close the cart sidebar
+closeCartButton.addEventListener("click", () => {
+  cartSidebar.style.right = "-100%"; // Slide out the sidebar completely
+});
+
+// Example: Triggering the cart sidebar
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("add-to-cart")) {
+    openCartSidebar(); // Open cart sidebar when an item is added
+  }
+});
+</script>
+
+
+<script>
+const products = [    
+    {
+        id: 1,
+        name: "Africa Map Puzzle",
+        price: 350,
+        image: "photos/image2.png",
+        description: "This puzzle teaches the user the names and geographical placements of all the African countries. The puzzle pieces each have the country names engraved on top.<br>Size: 37cm x 33cm x 1,7cm<br> For ages: 7+",
+    },
+    { 
+        "id": 2, 
+        "name": "Africa Map Puzzle", 
+        "price": 350, 
+        "image": "photos/image1.png", 
+        "description": "A detailed African map puzzle to enhance learning and fun for all ages."
+    },
+    { 
+        "id": 3, 
+        "name": "X's & O's Block Box", 
+        "price": 250, 
+        "image": "photos/image3.png", 
+        "description": "An interactive puzzle game based on the classic Tic-tac-toe game. Each set comes 9 blocks, made out of wood and plastic.<br>Size: 200mm x 200mm x 35mm <br>For ages:7+"
+    },
+    { 
+        "id": 4, 
+        "name": "Africa Map Puzzle", 
+        "price": 350, 
+        "image": "photos/image4.png", 
+        description: "This puzzle teaches the user the names and geographical placements of all the African countries. The puzzle pieces each have the country names engraved on top.<br>Size: 37cm x 33cm x 1,7cm<br> For ages: 7+",
+    },
+    { 
+        "id": 5, 
+        "name": "African Regions Puzzle", 
+        "price": 250, 
+        "image": "photos/image5.png", 
+        "description": "This puzzle educates the user on all the various regions in Africa as well as which countries fall under each region.<br>Size: 19,5cm x 19,5cm x 3,5cm<br>For ages: 7+"
+    },
+    { 
+        "id": 6, 
+        "name": "Tetris Puzzle Board game", 
+        "price": 350, 
+        "image": "photos/image8.png", 
+        "description": "Tetris puzzle board game.<br>Size: 33cm x 46cm x 1,5cm <br>For ages: 7+"
+    },
+    { 
+        "id": 7, 
+        "name": "Tangrams Puzzle 7", 
+        "price": 220, 
+        "image": "photos/image9.png", 
+        "description": "A tangram is a classic Chinese puzzle made up of seven flat shapes, or tans, derived from cutting a square into five triangles, one square, and one parallelogram. The challenge is to arrange these pieces to form various shapes, using all seven without overlap. Tangrams are both entertaining and educational, enhancing geometry, spatial reasoning, and problem-solving skills.<br>Size: 33cm x 46cm x 1,5cm<br>For ages 9+"
+    },
+    { 
+        "id": 8, 
+        "name": "South African Maze", 
+        "price": 200, 
+        "image": "photos/image11.png", 
+        "description": "South African maze with a metallic ball encased within the maze.<br>For ages: 7+"
+    },
+    { 
+        "id": 9, 
+        "name": "Africa Map Puzzle", 
+        "price": 350, 
+        "image": "photos/image12.png", 
+        "description": "This puzzle teaches the user the names and geographical placements of all the African countries. The puzzle pieces also have the country names engraved underneath.<br>Size: 37cm x 33cm x 1,7cm <br>For ages: 7+"
+    },
+    { 
+        "id": 10, 
+        "name": "AUKO Babies Tetris Puzzle", 
+        "price": 220, 
+        "image": "photos/image13.png", 
+        "description": "This puzzle is designed for toddlers. The puzzle pieces are tetris shaped. <br>For ages: 4+"
+    },
+    { 
+        "id": 11, 
+        "name": "RSA Map Puzzle", 
+        "price": 250, 
+        "image": "photos/image14.png", 
+        "description": "This puzzle educates the user on the different provinces in South Africa and all the different districts in the provinces. <br>Size: 33cm x 46cm x 1,5cm<br>For ages: 7+."
+    },
+    { 
+        "id": 12, 
+        "name": "RSA Educational Puzzle Kit", 
+        "price": 350, 
+        "image": "photos/image17.png", 
+        "description": "This puzzle educates the user on all the provinces in South Africa, as well as all the major districts in the provinces. Comes with booklet which contains fun facts about each province. <br>Size: 33cm x 46cm x 1,5cm <br>For ages: 7+"
+    }
+];
+
+    
+    const productGrid = document.getElementById('product-grid');
+    const cartItemsDiv = document.getElementById('cart-items');
+    const cartSidebar = document.getElementById('cartSidebar');
+    const closeCartButton = document.getElementById('closeCart');
+    const checkoutButton = document.getElementById('checkout');
+    const iconCart = document.querySelector('.iconCart');
+    const totalQuantityElement = document.querySelector('.totalQuantity');
+    
+    let cart = [];
+    
+    // Render products dynamically
+    function renderProducts() {
+    products.forEach(product => {
+        productGrid.innerHTML += `
+            <div class="item" data-id="${product.id}">
+                <img src="${product.image}" alt="${product.name}">
+                <h2>${product.name}</h2>
+                <p>${product.description}</p>
+                <div class="price">R${product.price}</div>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        `;
+    });
+}
+
+    
+    // Add product to cart (with quantity)
+    function addToCart(productId) {
+        const product = products.find(p => p.id == productId);
+        const existingItem = cart.find(item => item.id == productId);
+    
+        if (existingItem) {
+            existingItem.quantity += 1; // If product is already in cart, increase quantity
+        } else {
+            cart.push({ ...product, quantity: 1 }); // Otherwise, add new product to cart with quantity 1
+        }
+    
+        updateCart();
+    }
+    
+    // Update the cart display (cart items and total quantity)
+    function updateCart() {
+        totalQuantityElement.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+    
+        cartItemsDiv.innerHTML = '';
+        cart.forEach(product => {
+            cartItemsDiv.innerHTML += `
+                <div class="cart-item">
+                    <img src="${product.image}" alt="${product.name}">
+                    <div>${product.name}</div>
+                    <div>R${product.price} x ${product.quantity}</div>
+                    <button class="remove-from-cart" data-id="${product.id}">Remove</button>
+                </div>
+            `;
+        });
+    }
+    
+    // Remove item from cart
+    function removeFromCart(productId) {
+        const index = cart.findIndex(item => item.id === productId);
+        if (index > -1) {
+            cart.splice(index, 1);
+        }
+        updateCart();
+    }
+    
+    // Open the cart sidebar
+    function opencartSidebar() {
+        cartSidebar.style.right = '0'; // Slide in from the right
+    }
+    
+    // Close the cart sidebar
+    closeCartButton.addEventListener('click', () => {
+        cartSidebar.style.right = '-300px'; // Slide out to the right
+    });
+    
+    // Event listener for adding items to the cart
+    document.addEventListener('click', (e) => {
+        if (e.target && e.target.classList.contains('add-to-cart')) {
+            const productId = e.target.closest('.item').getAttribute('data-id');
+            addToCart(productId);
+            opencartSidebar(); // Show cart sidebar after adding an item
+        }
+    });
+    
+    // Event listener for removing items from the cart
+    document.addEventListener('click', (e) => {
+        if (e.target && e.target.classList.contains('remove-from-cart')) {
+            const productId = e.target.getAttribute('data-id');
+            removeFromCart(productId);
+        }
+    });
+    
+    // Handle checkout (open checkout.html)
+    checkoutButton.addEventListener('click', () => {
+    // Save cart data to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    // Redirect to checkout page
+    window.location.href = 'checkout.html';  // Redirects to checkout.html
+    });
+    
+    // Open the cart sidebar when clicking the cart icon
+    iconCart.addEventListener('click', () => {
+        opencartSidebar();
+    });
+    
+    // Initial rendering of products
+    renderProducts();
+    </script>
+     <!-- about us section starts -->
+
+     <section class="about" id="about">
+
+      <h1 class="heading"> <span>about</span> us</h1>
+
+      <div class="row">
+
+          <div class="image">
+              <img src="images/nail.png" alt="">
+          </div>
+
+          <div class="content">
+              <h3>Transforming ideas into reality</h3>
+              <p>At Aukopuzzles,we're passionate about combining fun with learning. Based in South Africa, 
+                  our mission is to provide educational toys that stimulate young minds and encourage problem-solving
+                   skills through engaging puzzles.</p>
+<p>AUKOPuzzles, a division of AUKODesigns, specializes in creating custom educational puzzles using 3D design and advanced 
+  manufacturing technologies to make learning more interactive and engaging.
+</p>
+             </p>
+          </div>
+
+      </div>
+
+  </section>
+  <section class="about" id="about">
+      <h1 class="heading">Why <span> choose us</span></h1>
+      
+
+      
+      <p>Our puzzles are created with high-quality materials and designed to be both fun
+          and educational. Each puzzle is tested for durability and safety, ensuring a
+          reliable learning tool for your child.
+      </p><br>
+        <div class="product-list">
+          <div class="product1">
+            <h4>Educational<br>Value.</h4>
+          </div>
+          <div class="product">
+            <h4>Quality<br> Craftsmanship</h4>
+          </div>
+          <div class="product3">
+            <h4>Age-Appropriate<br>Designs</h4>
+          </div>
+        </div>
+        <div class="product-list">
+          <div class="product">
+            <h4>Customizable<br>Options</h4>
+          </div>
+          <div class="product5">
+            <h4>Support for<br>Local Communities</h4>
+          </div>
+          <div class="product">
+            <h4>Trusted by<br>Parents and educators</h4>
+          </div>
+        </div>
+      </section>
+
+    
+<!-- ======= Clients Section ======= -->
+<section id="clients" class="clients">
+    <h1 class="heading"> <span>CLIENTS</span> & PARTNERS</h1>
+    <div class="container" data-aos="zoom-out">
+      <div class="slideshow-container">
+        <div class="slideshow-row">
+          <div class="client-slide">
+            <img src="images/tshimologong-dark-logo.svg" class="img-fluid" alt="Tshimologong Logo">
+          </div>
+          <div class="client-slide">
+            <img src="images/faku'gesi.jpg" class="img-fluid" alt="Faku'gesi Logo">
+          </div>
+          <div class="client-slide">
+            <img src="photos/bambelela.png" class="img-fluid" alt="FFL">
+          </div>
+          <div class="client-slide">
+            <img src="images/Tmg-makerspace-Logo.png" class="img-fluid" alt="Tmg-makerspace">
+          </div>
+          <div class="client-slide">
+            <img src="images/NYDA.png" class="img-fluid" alt="NYDA">
+          </div>
+          <div class="client-slide">
+            <img src="images/PSA.png" class="img-fluid" alt="PSA">
+          </div>
+          <div class="client-slide">
+            <img src="photos/FFL_logo_web.webp" class="img-fluid" alt="FFL">
+          </div>
+          <div class="client-slide">
+            <img src="photos/holly.png" class="img-fluid" alt="Holly">
+          </div>
+          <div class="client-slide">
+            <img src="photos/ARM.png" class="img-fluid" alt="ARM">
+          </div>
+          <div class="client-slide">
+            <img src="photos/22s.jpg" class="img-fluid" alt="22S">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+    <section class="contact" id="contact">
+        <h1 class="heading"> <span>contact </span> us</h1>
+        <div class="icons-container">
+          <div class="icon">
+            <i class="fas fa-envelope"></i>
+            <h3>Social Media Handles</h3>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+              </svg> AUKO Designs
+              <br><br>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </svg> aukodesigns
+            </p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-phone"></i>
+            <h3>Phone Number & Email</h3>
+            <p>
+              +27 60 615 7687 <br>
+              +27 67 076 4074 <br>
+              aukodesigns@gmail.com<br>
+              misokuhleaukodesigns@gmail.com
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3> <i class=""></i> Aukopuzzles </h3>
+                <p>trading as AUKODesigns </p>
+            </div>
+    
+            <div class="box">
+                <h3>category</h3>
+                <a href="#"> <i class="fas fa-caret-right"></i> about us</a>
+                <a href="#"> <i class="fas fa-caret-right"></i> news & events</a>
+                <a href="#"> <i class="fas fa-caret-right"></i> contact us</a>
+            </div>
+        </div>
+    
+        <div class="credit"> &copy; copyright @ 2024 by <span>Anele Makopo</span></div>
+    </section>
+    
+    <script src="app.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aukopuzzles</title>
+     <!-- favicon-->
+     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/logo1.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/logo1.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/logo1.png">
+     <!-- font awesome cdn link  -->
+       <!-- font awesome cdn link  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- lightgallery css cdn link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+     <!-- custom css file link  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- lightgallery css cdn link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="checkout.css">
+    <script src="https://js.paystack.co/v1/inline.js"></script> <!-- Paystack Script -->
+</head>
+<body>
+    <header class="header">
+        <img src="images/logo (1).png" alt="AUKODesign" class="logo">
+    </header>
+
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+        <h1>Checkout</h1>
+        <div class="form">
+            <div class="group">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+
+            <div class="group">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone" required>
+            </div>
+
+            <div class="group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" placeholder="Your email address" required />
+            </div>
+
+            <div class="group">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" required>
+            </div>
+
+            <div class="group">
+                <label for="country">Country</label>
+                <select name="country" id="country" required>
+                    <option value="">Choose...</option>
+                    <option value="South Africa">South Africa</option>
+                </select>
+            </div>
+            
+            <div class="group">
+                <label for="city">City</label>
+                <select name="city" id="city" required>
+                    <option value="">Choose...</option>
+                    <!-- Western Cape -->
+                    <optgroup label="Western Cape">
+                        <option value="Cape Town">Cape Town</option>
+                        <option value="Stellenbosch">Stellenbosch</option>
+                        <option value="George">George</option>
+                        <option value="Paarl">Paarl</option>
+                        <option value="Mossel Bay">Mossel Bay</option>
+                    </optgroup>
+            
+                    <!-- Gauteng -->
+                    <optgroup label="Gauteng">
+                        <option value="Johannesburg">Johannesburg</option>
+                        <option value="Pretoria">Pretoria</option>
+                        <option value="Soweto">Soweto</option>
+                        <option value="Centurion">Centurion</option>
+                        <option value="Benoni">Benoni</option>
+                    </optgroup>
+            
+                    <!-- KwaZulu-Natal -->
+                    <optgroup label="KwaZulu-Natal">
+                        <option value="Durban">Durban</option>
+                        <option value="Pietermaritzburg">Pietermaritzburg</option>
+                        <option value="Richards Bay">Richards Bay</option>
+                        <option value="Newcastle">Newcastle</option>
+                        <option value="Margate">Margate</option>
+                    </optgroup>
+            
+                    <!-- Eastern Cape -->
+                    <optgroup label="Eastern Cape">
+                        <option value="Port Elizabeth">Port Elizabeth</option>
+                        <option value="East London">East London</option>
+                        <option value="Mthatha">Mthatha</option>
+                        <option value="Grahamstown">Grahamstown</option>
+                        <option value="Queenstown">Queenstown</option>
+                    </optgroup>
+            
+                    <!-- Free State -->
+                    <optgroup label="Free State">
+                        <option value="Bloemfontein">Bloemfontein</option>
+                        <option value="Welkom">Welkom</option>
+                        <option value="Bethlehem">Bethlehem</option>
+                        <option value="Sasolburg">Sasolburg</option>
+                        <option value="Harrismith">Harrismith</option>
+                    </optgroup>
+            
+                    <!-- Limpopo -->
+                    <optgroup label="Limpopo">
+                        <option value="Polokwane">Polokwane</option>
+                        <option value="Tzaneen">Tzaneen</option>
+                        <option value="Thohoyandou">Thohoyandou</option>
+                        <option value="Mokopane">Mokopane</option>
+                        <option value="Bela-Bela">Bela-Bela</option>
+                    </optgroup>
+            
+                    <!-- Mpumalanga -->
+                    <optgroup label="Mpumalanga">
+                        <option value="Nelspruit">Nelspruit</option>
+                        <option value="Witbank">Witbank</option>
+                        <option value="Secunda">Secunda</option>
+                        <option value="Middleburg">Middleburg</option>
+                        <option value="Barberton">Barberton</option>
+                    </optgroup>
+            
+                    <!-- Northern Cape -->
+                    <optgroup label="Northern Cape">
+                        <option value="Kimberley">Kimberley</option>
+                        <option value="Upington">Upington</option>
+                        <option value="Springbok">Springbok</option>
+                        <option value="Kuruman">Kuruman</option>
+                        <option value="De Aar">De Aar</option>
+                    </optgroup>
+            
+                    <!-- North West -->
+                    <optgroup label="North West">
+                        <option value="Rustenburg">Rustenburg</option>
+                        <option value="Mahikeng">Mahikeng</option>
+                        <option value="Potchefstroom">Potchefstroom</option>
+                        <option value="Klerksdorp">Klerksdorp</option>
+                        <option value="Brits">Brits</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="return">
+            <div class="row">
+                <div>Total Quantity</div>
+                <div id="totalQuantity">0</div>
+            </div>
+            <div class="row">
+                <div>Total Price</div>
+                <div id="totalPrice">R0.00</div>
+            </div>
+        </div>
+
+        <button type="button" id="checkoutButton" class="buttonCheckout">PAY</button>
+    </div>
+
+
+        <!-- Right Section -->
+        
+    </div>
+    
+   <script>
+    // Initialize cart from localStorage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Add a test item to the cart (this should be done elsewhere, not on every page load)
+if (cart.length === 0) { // Adding a test item only if the cart is empty
+    cart.push({ productId: '123', price: 350, quantity: 2 });
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+const totalQuantityElement = document.getElementById('totalQuantity');
+const totalPriceElement = document.getElementById('totalPrice');
+
+// Function to render the cart summary (total quantity and total price)
+function renderCartSummary() {
+    let totalQuantity = 0;
+    let totalPrice = 0;
+
+    // Iterate over each item in the cart and calculate the totals
+    cart.forEach(item => {
+        totalQuantity += item.quantity;
+        totalPrice += item.price * item.quantity;
+    });
+
+    // Update the HTML with the calculated totals
+    totalQuantityElement.textContent = totalQuantity;
+    totalPriceElement.textContent = `R${totalPrice.toFixed(2)}`;
+}
+
+// Paystack payment function
+function payWithPaystack() {
+    const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const email = document.getElementById('email').value;
+
+    if (!email) {
+        alert("Please enter a valid email.");
+        return;
+    }
+
+    let handler = PaystackPop.setup({
+        key: 'pk_live_33a9f4b7d29154ebf5069556627cba68f6d6ed12',
+        email: email,
+        amount: totalAmount * 100, // Convert to kobo (cents)
+        currency: 'ZAR',
+        ref: 'AUKO-' + Math.floor((Math.random() * 1000000000) + 1),
+        callback: function(response) {
+            alert('Payment successful! Transaction ref: ' + response.reference);
+            localStorage.removeItem('cart'); // Clear cart after successful payment
+        },
+        onClose: function() {
+            alert('Transaction was not completed, window closed.');
+        }
+    });
+    handler.openIframe();
+}
+
+// Checkout button click event handler
+document.getElementById('checkoutButton').addEventListener('click', function() {
+    if (cart.length === 0) {
+        alert("Your cart is empty.");
+    } else {
+        payWithPaystack();
+    }
+});
+
+// Initialize cart summary (called when the page loads)
+renderCartSummary();
+
+   </script>
+</body>
+</html>
+
+
